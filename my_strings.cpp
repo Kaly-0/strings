@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
 
-int main() {
-	std::string filename = "test";
+int main(int argc, char **argv) {
+	std::string filename(argv[1]);
 	std::ifstream file(filename, std::ios::binary);
 		if (!file)
 			return 1;
@@ -11,6 +11,7 @@ int main() {
 
 		while (file.get(c)) {
 			std::cout << c;
+			if   ;
 
 		};
 };
