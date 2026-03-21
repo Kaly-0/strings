@@ -9,7 +9,7 @@ int main () {
 	cin >> chiffre;
 	
 	for (int i = 1; i < 10; i++) {
-		cout << chiffre * i << "\n";
+		cout << chiffre << "x" << i << " = " <<  chiffre * i  << "\n";
 	}
 }
 
