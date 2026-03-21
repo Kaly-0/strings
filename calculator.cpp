@@ -6,6 +6,7 @@ int main () {
 	double number2;
 	char operateur;
 	double resultat;
+	bool erreur = false;
 
 
 	cout << "Enter the first number : ";
@@ -25,15 +26,18 @@ int main () {
 				resultat = number1 * number2;
 				break;
 			case '/':
-				if (number1 == 0) {
-					cout << "Erreur: division par 0 impossible \n"; }
-				else {					
+				if (number2 == 0) {
+					cout << "Erreur: division par 0 impossible \n";
+			       erreur = true;	}
+				   else {					
 					resultat = number1 / number2;
 				}
 				break;
 }
+	if (!erreur) {
+		cout << "Résultat " << number1 << " " << operateur << " " << number2 << " = " << resultat << "  \n";
+	}
 
-	cout << "Résultat " << number1 << " " << operateur << " " << number2 << " = " << resultat << "  \n";
 	return 0;
 }
 
